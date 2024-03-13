@@ -13,8 +13,13 @@ const displayPhone = (phoneData, isShowALL) => {
   showPhones.textContent = "";
 
   const showButton = document.getElementById("show_Button");
-  if (phoneData.length > 9 && !isShowALL) {
+  const noTextAvailable = document.getElementById("no_text_available");
+  if (phoneData.length < 1) {
+    noTextAvailable.classList.remove("hidden");
+    showButton.classList.add("hidden");
+  } else if (phoneData.length > 9 && !isShowALL) {
     showButton.classList.remove("hidden");
+    noTextAvailable.classList.add("hidden");
   } else {
     showButton.classList.add("hidden");
   }
@@ -43,7 +48,7 @@ const displayPhone = (phoneData, isShowALL) => {
           <span class="text-red-400">Please Press</span>
           </p>
           <div class="card-actions">
-            <button onclick="showDetails('${phone.slug}')" class="btn btn-info text-white text-xl">Show Details </button>
+            <button onclick="showDetails('${phone.slug}')" class="btn bg-[#8850bd] text-white text-xl">Show Details </button>
           </div>
         </div>
       `;
@@ -102,19 +107,33 @@ const showModal = (phone) => {
           <p class="mb-5">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
           </p>
-          <p><span class="font-semibold text-xl">Storage : </span> ${phone?.mainFeatures?.storage}</p>
-          <p><span class="font-semibold text-xl">Display Size : </span> ${phone?.mainFeatures?.displaySize}</p>
-          <p><span class="font-semibold text-xl"> Chipset : </span> ${phone?.mainFeatures?.chipSet}</p>
-          <p><span class="font-semibold text-xl"> Memory : </span> ${phone?.mainFeatures?.memory}</p>
-          <p><span class="font-semibold text-xl"> Slug : </span> ${phone?.slug}</p>
+          <p><span class="font-semibold text-xl">Storage : </span> ${
+            phone?.mainFeatures?.storage
+          }</p>
+          <p><span class="font-semibold text-xl">Display Size : </span> ${
+            phone?.mainFeatures?.displaySize
+          }</p>
+          <p><span class="font-semibold text-xl"> Chipset : </span> ${
+            phone?.mainFeatures?.chipSet
+          }</p>
+          <p><span class="font-semibold text-xl"> Memory : </span> ${
+            phone?.mainFeatures?.memory
+          }</p>
+          <p><span class="font-semibold text-xl"> Slug : </span> ${
+            phone?.slug
+          }</p>
           <p>
-            <span class="font-semibold text-xl"> Release date : </span> ${phone?.releaseDate}
+            <span class="font-semibold text-xl"> Release date : </span> ${
+              phone?.releaseDate
+            }
           </p>
           <p>
             <span class="font-semibold text-xl">Brand : </span> ${phone?.brand}
           </p>
           <p>
-            <span class="font-semibold text-xl">Gps :</span> ${phone?.others?.GPS}
+            <span class="font-semibold text-xl">Gps :</span> ${
+              phone?.others?.GPS || "No GPS Available"
+            }
           </p>
         </div>
       </div>
