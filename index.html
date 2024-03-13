@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam's Phone</title>
+    <!-- link of fav Icon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/—Pngtree—vector cell phone icon_3762914.png"
+    />
+    <!-- link of css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- link of Font Awasam -->
+    <script
+      src="https://kit.fontawesome.com/e6b4a99a6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link of Tailwind and daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="">
+    <header class="bg-gray-200 pt-10">
+      <nav>
+        <!-- navigation starts  -->
+        <div class="navbar container mx-auto px-2">
+          <div class="navbar-start">
+            <a class="btn btn-ghost md:text-3xl text-2xl">Sam's Gadgets</a>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn btn-info md:px-5 btn-sm sm:btn-sm px-3 md:btn-md text-white md:text-lg"
+              >Sing Up</a
+            >
+          </div>
+        </div>
+        <!-- navigation End  -->
+      </nav>
+      <!-- nav END  -->
+      <!-- center text  -->
+      <div>
+        <div class="card md:mx-auto md:px-10">
+          <div class="card-body items-center text-center">
+            <h2 class="card-title md:text-6xl text-4xl mb-5">
+              Apple Iphone 13 Pro Max
+            </h2>
+            <p class="md:text-xl">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humou.
+            </p>
+            <div class="navbar-end mt-5">
+              <a class="btn btn-info px-5 text-white text-lg">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- center image  -->
+      <div class="px-5 flex justify-center gap-16 items-end">
+        <div class="">
+          <img
+            class="md:rounded-[50px] rounded-2xl md:h-[500px]"
+            src="./images/Apple_iphone11_ios14-springboard-widgets_09162020_inline.jpg.large.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="md:rounded-[50px] h- md:h-[650px] rounded-2xl"
+            src="./images/Apple_iphone11_ios14-springboard-widgets_09162020_inline.jpg.large.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="md:rounded-[50px] md:h-[500px] rounded-2xl"
+            src="./images/Apple_iphone11_ios14-springboard-widgets_09162020_inline.jpg.large.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Header END  -->
+    <div class="md:-mt-[20rem] -mt-[5rem] md:h-96 h-40 bg-white mb-5"></div>
+    <!-- Main Section Starts  -->
+    <main>
+      <!-- scarch Container  -->
+      <div class="text-center mx-10">
+        <h1 class="md:text-5xl text-3xl font-semibold">Search your phone</h1>
+
+        <div class="mt-8 mx-auto mb-16 flex justify-center items-center">
+          <input
+            id="Search_fild"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered input-md w-[27rem] border-r-0 focus:border-none text-xl"
+          />
+          <a onclick="searchFild()" class="btn btn-info px-5 text-white text-lg"
+            >Search</a
+          >
+        </div>
+      </div>
+      <!-- spenner Comtainer  -->
+      <div
+        id="scroll_bar"
+        class="text-center -mt-10 text-[#072eaf] pb-40 hidden"
+      >
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+      <!-- main container  -->
+      <section
+        id="Phone_container"
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 place-items-center"
+      ></section>
+      <!-- set show all Button  -->
+      <div id="show_Button" class="mt-5 text-center my-10 hidden">
+        <button
+          onclick="showAllButton()"
+          class="btn btn-info px-10 text-white text-lg"
+        >
+          Show All
+        </button>
+      </div>
+
+      <!-- show Modal Section Starts  -->
+      <dialog id="show_modal_phone_details" class="modal">
+        <!-- -------------------------- -->
+      </dialog>
+      <!-- show Modal Section End  -->
+    </main>
+    <!-- Main Section END  -->
+    <footer class="bg-gray-200">
+      <div class="mt-10 container mx-auto">
+        <!-- footer 1St Part  -->
+        <div>
+          <div
+            class="footer p-10 container mx-auto flex items-end justify-between"
+          >
+            <aside>
+              <h1 class="md:text-5xl text-2xl">Sam's Gadgets</h1>
+              <p class="md:text-xl ml-2 mt-2">You can definitely work.</p>
+            </aside>
+            <nav>
+              <div class="place-items-center grid grid-flow-col gap-1 md:gap-4">
+                <a
+                  href=""
+                  class="bg-white rounded-full flex justify-center items-center md:p-5 p-3 w-5 h-5 md:text-xl"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href=""
+                  class="bg-white rounded-full flex justify-center items-center md:p-5 p-3 w-5 h-5 md:text-xl"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a
+                  href=""
+                  class="bg-white rounded-full flex justify-center items-center md:p-5 p-3 w-5 h-5 md:text-xl"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href=""></a>
+                <button
+                  class="btn btn-info btn-sm md:btn-lg md:px-10 md:-mt-2 text-white md:text-lg"
+                >
+                  Join Premium
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- footer 2St Part  -->
+        <div>
+          <div class="footer p-10 border-t-2 container mx-auto border-red-400">
+            <nav>
+              <h6 class="footer-title">Services</h6>
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Services</h6>
+              <a class="link link-hover">Branding</a>
+              <a class="link link-hover">Design</a>
+              <a class="link link-hover">Marketing</a>
+              <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Company</h6>
+              <a class="link link-hover">About us</a>
+              <a class="link link-hover">Contact</a>
+              <a class="link link-hover">Jobs</a>
+              <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+              <h6 class="footer-title">Legal</h6>
+              <a class="link link-hover">Terms of use</a>
+              <a class="link link-hover">Privacy policy</a>
+              <a class="link link-hover">Cookie policy</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- js file link  -->
+    <script src="./index.js"></script>
+  </body>
+</html>
